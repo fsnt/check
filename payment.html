@@ -3,24 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>预约列表</title>
+    <title>门诊缴费</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="appointment-page">
+<body class="payment-page">
     <!-- 用户信息栏 -->
     <div class="user-bar">
         <div class="user-name">
             <span id="currentUser" class="editable-text">人名</span>
             <span class="arrow-down">▼</span>
         </div>
-        <div class="user-type">预约挂号</div>
+        <div class="user-status">
+            <span class="editable-text" id="paymentStatus">已缴费</span>
+            <span class="arrow-down">▼</span>
+        </div>
     </div>
 
-    <!-- 预约列表 -->
-    <div class="appointment-list" id="appointmentList">
-        <!-- 预约卡片由 JS 动态生成 -->
+    <!-- 缴费列表 -->
+    <div class="payment-list" id="paymentList">
+        <!-- 缴费卡片由 JS 动态生成 -->
     </div>
 
-    <script src="app.js"></script>
+    <script src="payment.js"></script>
 </body>
 </html>
