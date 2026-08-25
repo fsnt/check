@@ -1,8 +1,18 @@
+// 生成订单号：前8位年月日 + 5位随机数，共13位
+function generateOrderNo() {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    const random = String(Math.floor(Math.random() * 100000)).padStart(5, '0');
+    return `${year}${month}${day}${random}`;
+}
+
 // 门诊缴费数据
 const payments = [
     {
         id: 1,
-        orderNo: '2026031468717',
+        orderNo: generateOrderNo(),
         hospital: '南方医科大学第三附属医院',
         department: '中医科门诊',
         doctor: '谢国平',
@@ -11,7 +21,7 @@ const payments = [
     },
     {
         id: 2,
-        orderNo: '2026031468717',
+        orderNo: generateOrderNo(),
         hospital: '南方医科大学第三附属医院',
         department: '中医科门诊',
         doctor: '谢国平',

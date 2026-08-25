@@ -1,7 +1,17 @@
+// 生成订单号：前8位年月日 + 5位随机数，共13位
+function generateOrderNo() {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    const random = String(Math.floor(Math.random() * 100000)).padStart(5, '0');
+    return `${year}${month}${day}${random}`;
+}
+
 // 缴费详情数据
 const detailData = {
     patient: '人名',
-    serialNo: '2026031468717',
+    serialNo: generateOrderNo(),
     department: '中医科门诊',
     totalAmount: '540.00 元',
     actualPay: '215.99 元',

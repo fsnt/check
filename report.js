@@ -1,3 +1,15 @@
+// 获取当前时间，格式化为 YYYY-MM-DD HH:mm:ss
+function getCurrentDateTime() {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    const hour = String(now.getHours()).padStart(2, '0');
+    const minute = String(now.getMinutes()).padStart(2, '0');
+    const second = String(now.getSeconds()).padStart(2, '0');
+    return `${year}-${month}-${day} ${hour}:${minute}:${second}`;
+}
+
 // 门诊报告数据
 const reports = [
     {
@@ -7,9 +19,9 @@ const reports = [
         projectName: 'T淋巴细胞亚群检测',
         applyDept: '感染科门诊',
         applyDoctor: '黄莹',
-        applyTime: '2026-01-15 10:55:28',
+        applyTime: getCurrentDateTime(),
         reportDept: '临检室',
-        reportTime: '2026-01-15 11:04:17',
+        reportTime: getCurrentDateTime(),
         patient: '人名'
     },
     {
@@ -19,9 +31,9 @@ const reports = [
         projectName: '免疫六项',
         applyDept: '感染科门诊',
         applyDoctor: '黄莹',
-        applyTime: '2026-01-15 08:56:05',
+        applyTime: getCurrentDateTime(),
         reportDept: '临检室',
-        reportTime: '2026-01-15 11:04:17',
+        reportTime: getCurrentDateTime(),
         patient: '人名'
     }
 ];

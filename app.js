@@ -1,26 +1,48 @@
+// 获取当前时间，格式化为 YYYY-MM-DD HH:mm:ss
+function getCurrentDateTime() {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    const hour = String(now.getHours()).padStart(2, '0');
+    const minute = String(now.getMinutes()).padStart(2, '0');
+    const second = String(now.getSeconds()).padStart(2, '0');
+    return `${year}-${month}-${day} ${hour}:${minute}:${second}`;
+}
+
+// 生成订单号：前8位年月日 + 5位随机数，共13位
+function generateOrderNo() {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    const random = String(Math.floor(Math.random() * 100000)).padStart(5, '0');
+    return `${year}${month}${day}${random}`;
+}
+
 // 预约数据
 const appointments = [
     {
         id: 1,
-        orderNo: '2026082503768',
+        orderNo: generateOrderNo(),
         status: '预约成功(已缴费)',
         patient: '人名',
         doctor: '赵羽',
         department: '血液内科',
         price: '39.00 元',
-        time: '2026-08-26 08:00-08:30',
+        time: getCurrentDateTime(),
         seqNo: '8',
         location: '门诊大楼4楼-内科候诊区30号诊室'
     },
     {
         id: 2,
-        orderNo: '2026041805453',
+        orderNo: generateOrderNo(),
         status: '预约成功(已缴费)',
         patient: '人名',
         doctor: '古瑞宾',
         department: '中医骨伤科',
         price: '25.00 元',
-        time: '2026-04-19 09:00-09:30',
+        time: getCurrentDateTime(),
         seqNo: '12',
         location: '门诊大楼3楼-中医候诊区15号诊室'
     }

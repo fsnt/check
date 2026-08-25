@@ -1,3 +1,15 @@
+// 获取当前时间，格式化为 YYYY-MM-DD HH:mm:ss
+function getCurrentDateTime() {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    const hour = String(now.getHours()).padStart(2, '0');
+    const minute = String(now.getMinutes()).padStart(2, '0');
+    const second = String(now.getSeconds()).padStart(2, '0');
+    return `${year}-${month}-${day} ${hour}:${minute}:${second}`;
+}
+
 // 消费详情基本信息
 const basicInfo = {
     fundPay: '-¥13.30',
@@ -5,7 +17,7 @@ const basicInfo = {
     cashPay: '-¥3.32',
     otherPay: '¥0.00',
     status: '医保支付成功',
-    payTime: '2025-08-16 10:11:46',
+    payTime: getCurrentDateTime(),
     tradeNo: '440120250816709557979'
 };
 
