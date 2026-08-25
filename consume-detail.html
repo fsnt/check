@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>消费详情</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="consume-page">
+    <!-- 医院名称 -->
+    <div class="consume-hospital">
+        <div class="hospital-name editable-text" id="hospitalName">广州市天河区天园街社区卫生服务中心-普通门诊</div>
+        <div class="consume-amount editable-text" id="consumeAmount">-¥16.62</div>
+    </div>
+
+    <!-- 基本信息卡片 -->
+    <div class="consume-card">
+        <div class="info-list" id="basicInfoList">
+            <!-- 基本信息由 JS 动态生成 -->
+        </div>
+    </div>
+
+    <!-- 普通门诊 -->
+    <div class="consume-card">
+        <div class="section-header" id="addItemBtn">
+            <div class="section-title">
+                <span class="title-bar"></span>
+                <span>普通门诊</span>
+            </div>
+            <div class="section-total editable-text" id="sectionTotal">共消费¥16.62</div>
+        </div>
+        <div class="table-header">
+            <span class="col-name">医保目录名称</span>
+            <span class="col-category">类别</span>
+            <span class="col-price">单价</span>
+            <span class="col-qty">数量</span>
+            <span class="col-total">总额</span>
+        </div>
+        <div class="item-list" id="itemList">
+            <!-- 细项由 JS 动态生成 -->
+        </div>
+    </div>
+
+    <script src="consume-detail.js"></script>
+</body>
+</html>

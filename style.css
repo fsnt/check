@@ -246,7 +246,6 @@ a {
 
 .info-label {
     flex-shrink: 0;
-    width: 90px;
     font-size: 15px;
     color: #999;
     line-height: 1.5;
@@ -405,6 +404,164 @@ a {
     font-weight: bold;
     color: #333;
     padding: 20px 20px 12px;
+}
+
+/* ========== 消费详情页样式 ========== */
+.consume-page {
+    padding-bottom: 40px;
+    background-color: #f0f2f5;
+}
+
+.consume-hospital {
+    background: #fff;
+    text-align: center;
+    padding: 30px 20px 24px;
+    margin-bottom: 12px;
+}
+
+.hospital-name {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.hospital-name:hover {
+    background-color: #f5f5f5;
+}
+
+.consume-amount {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    display: inline-block;
+}
+
+.consume-amount:hover {
+    background-color: #f5f5f5;
+}
+
+.consume-card {
+    background: #fff;
+    margin-bottom: 12px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.title-bar {
+    width: 4px;
+    height: 18px;
+    background: #1890ff;
+    margin-right: 10px;
+    border-radius: 2px;
+}
+
+.section-total {
+    font-size: 15px;
+    color: #333;
+    cursor: pointer;
+    padding: 2px 6px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.section-total:hover {
+    background-color: #f5f5f5;
+}
+
+.table-header {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    background: #f5f7fa;
+    font-size: 15px;
+    color: #666;
+}
+
+.table-header span {
+    flex: 1;
+}
+
+.table-header .col-name {
+    flex: 2;
+    text-align: left;
+}
+
+.table-header .col-category {
+    flex: 1.2;
+}
+
+/* 消费细项列表 */
+.consume-item-row {
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.consume-item-row:last-child {
+    border-bottom: none;
+}
+
+.consume-item-inner {
+    display: flex;
+    align-items: stretch;
+    transform: translateX(0);
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.consume-item-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 14px 0px;
+    font-size: 15px;
+    color: #333;
+    min-width: 0;
+}
+
+.consume-item-content span {
+    flex: 1;
+    cursor: pointer;
+    padding: 2px 4px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    word-break: break-all;
+}
+
+.consume-item-content span:hover {
+    background-color: #f5f5f5;
+}
+
+.consume-item-content .col-name {
+    flex: 2;
+    text-align: left;
+}
+
+.consume-item-content .col-category {
+    flex: 1.2;
 }
 
 .info-value.actual-pay {
@@ -576,7 +733,6 @@ a {
     }
 
     .info-label {
-        width: 80px;
         font-size: 14px;
     }
 
