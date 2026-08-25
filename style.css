@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", Helvetica, "Microsoft YaHei", sans-serif;
+    background-color: #f5f6f8;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ========== 首页样式 ========== */
+.home-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-container {
+    width: 100%;
+    max-width: 480px;
+    padding: 40px 24px;
+}
+
+.home-header {
+    text-align: center;
+    margin-bottom: 60px;
+    color: #fff;
+}
+
+.home-header h1 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.home-header .subtitle {
+    font-size: 16px;
+    opacity: 0.85;
+}
+
+.button-module {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.btn-primary {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-icon {
+    font-size: 32px;
+    margin-right: 16px;
+}
+
+.btn-text {
+    flex: 1;
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+
+.btn-arrow {
+    font-size: 28px;
+    color: #ccc;
+    font-weight: 300;
+}
+
+/* ========== 预约列表页样式 ========== */
+.appointment-page {
+    padding-bottom: 40px;
+}
+
+.app-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background: #f0f0f0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.header-back {
+    font-size: 24px;
+    color: #333;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-title {
+    text-align: center;
+    flex: 1;
+}
+
+.header-title h2 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #333;
+}
+
+.header-sub {
+    display: block;
+    font-size: 13px;
+    color: #999;
+    margin-top: 2px;
+}
+
+.header-more {
+    font-size: 20px;
+    color: #333;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 2px;
+}
+
+/* 用户信息栏 */
+.user-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.user-name {
+    font-size: 22px;
+    font-weight: 500;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.arrow-down {
+    font-size: 14px;
+    color: #999;
+}
+
+.user-type {
+    font-size: 22px;
+    color: #333;
+}
+
+/* 预约列表 */
+.appointment-list {
+    padding: 16px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.appointment-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px 16px;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.order-no {
+    font-size: 17px;
+    color: #333;
+}
+
+.order-no .label {
+    color: #333;
+}
+
+.order-no .value {
+    color: #333;
+    font-weight: 500;
+}
+
+.status-tag {
+    background: #e6f7f2;
+    color: #26c2a0;
+    font-size: 15px;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+/* 信息行 */
+.info-list {
+    padding: 8px 20px 4px;
+}
+
+.info-row {
+    display: flex;
+    align-items: flex-start;
+    padding: 12px 0;
+    border-bottom: 1px solid #f8f8f8;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    flex-shrink: 0;
+    width: 90px;
+    font-size: 17px;
+    color: #999;
+    line-height: 1.5;
+}
+
+.info-value {
+    flex: 1;
+    font-size: 17px;
+    color: #333;
+    text-align: right;
+    line-height: 1.5;
+    word-break: break-all;
+    cursor: pointer;
+    padding: 2px 6px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    min-height: 24px;
+}
+
+.info-value:hover {
+    background-color: #f5f5f5;
+}
+
+.info-value.price {
+    color: #26c2a0;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.info-value.seq-no {
+    color: #e74c3c;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.info-value.location {
+    text-align: left;
+    padding-left: 8px;
+}
+
+/* 编辑输入框 */
+.info-value input {
+    width: 100%;
+    font-size: 17px;
+    color: #333;
+    border: 1px solid #26c2a0;
+    border-radius: 4px;
+    padding: 4px 8px;
+    outline: none;
+    text-align: right;
+    background: #fff;
+    font-family: inherit;
+}
+
+.info-value.price input {
+    font-size: 22px;
+    color: #26c2a0;
+    font-weight: 500;
+}
+
+.info-value.seq-no input {
+    font-size: 24px;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.info-value.location input {
+    text-align: left;
+}
+
+/* 底部按钮 */
+.card-footer {
+    display: flex;
+    gap: 16px;
+    padding: 20px 20px 24px;
+    justify-content: flex-end;
+}
+
+.btn {
+    padding: 12px 32px;
+    border-radius: 8px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.btn:active {
+    opacity: 0.8;
+}
+
+.btn-outline {
+    background: #fff;
+    color: #333;
+    border: 1px solid #d0d0d0;
+}
+
+.btn-solid {
+    background: #0d47a1;
+    color: #fff;
+}
+
+/* 响应式 - 移动端适配 */
+@media (max-width: 480px) {
+    .home-header h1 {
+        font-size: 28px;
+    }
+
+    .info-label {
+        width: 80px;
+        font-size: 16px;
+    }
+
+    .info-value {
+        font-size: 16px;
+    }
+
+    .info-value.price {
+        font-size: 20px;
+    }
+
+    .info-value.seq-no {
+        font-size: 22px;
+    }
+
+    .user-name,
+    .user-type {
+        font-size: 20px;
+    }
+}
