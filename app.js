@@ -34,7 +34,7 @@ const fieldConfig = [
     { key: 'price', label: '诊金费用', type: 'text', class: 'price' },
     { key: 'time', label: '预约时间', type: 'text' },
     { key: 'seqNo', label: '就诊序号', type: 'text', class: 'seq-no' },
-    { key: 'location', label: '就诊位置', type: 'text', class: 'location' }
+    { key: 'location', label: '就诊位置', type: 'text' }
 ];
 
 // 渲染预约列表
