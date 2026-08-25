@@ -156,7 +156,7 @@ a {
 }
 
 .user-name {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
     color: #333;
     display: flex;
@@ -175,7 +175,7 @@ a {
 }
 
 .user-status {
-    font-size: 18px;
+    font-size: 16px;
     color: #333;
     display: flex;
     align-items: center;
@@ -405,7 +405,7 @@ a {
 }
 
 .detail-section-title {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     color: #333;
     padding: 20px 20px 12px;
@@ -413,19 +413,19 @@ a {
 
 .info-value.actual-pay {
     color: #f39c12;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
 }
 
 .info-value.pay-status {
     color: #26c2a0;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
 }
 
 .info-value.actual-pay input,
 .info-value.pay-status input {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
 }
 
@@ -475,7 +475,7 @@ a {
 }
 
 .item-name {
-    font-size: 18px;
+    font-size: 16px;
     color: #333;
     font-weight: 500;
     cursor: pointer;
@@ -489,7 +489,7 @@ a {
 }
 
 .item-price {
-    font-size: 18px;
+    font-size: 16px;
     color: #333;
     font-weight: 500;
     cursor: pointer;
@@ -589,15 +589,15 @@ a {
     }
 
     .info-value.price {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .info-value.seq-no {
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .user-name,
     .user-type {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
