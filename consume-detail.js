@@ -298,7 +298,7 @@ function handleItemEditClick(e) {
 
 // 绑定顶部可编辑文本
 function bindHeaderEditable() {
-    const editableEls = document.querySelectorAll('.consume-hospital .editable-text');
+    const editableEls = document.querySelectorAll('.consume-hospital .editable-text, .section-total');
     editableEls.forEach(el => {
         el.addEventListener('click', handleHeaderEditClick);
     });
